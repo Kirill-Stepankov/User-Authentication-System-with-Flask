@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
     {% if title %}
-    <title>Authentication System</title>
+        Authentication System
     {% else %}
-    <title>{{title}}</title>
+        {{title}}
     {% endif %}
-</head>
-<body>
-<a href="{{ url_for('main.index') }}">Home</a>
-{% block content %}{% endblock %}
-</body>
-</html>
+{% endblock %}
+
+{% block content %}
+    {% block my_content %}{% endblock %}
+{% endblock %}
