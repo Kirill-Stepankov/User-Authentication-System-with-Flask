@@ -8,12 +8,25 @@ Authentication System
 {% endif %}
 {% endblock %}
 
+{% block navbar %}
+{% if current_user.is_authenticated %}
+<nav>
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" href="{{url_for('auth.logout')}}">Logout</a>
+  </li>
+</ul>
+</nav>
+{% endif %}
+{% endblock %}
+
 {% block content %}
+
 
 <div class="container my-5">
     <br>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 mx-auto">
             {% with messages = get_flashed_messages() %}
             {% if messages %}
             {% for message in messages %}
