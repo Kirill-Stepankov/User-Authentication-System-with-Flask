@@ -35,4 +35,5 @@ class SendEmailResetPasswordForm(FlaskForm):
 
 class ResetPasswordForm(FlaskForm):
     password = PasswordField("New password", validators=[DataRequired()])
-    repeat_password = PasswordField("Repeat new password", validators=[EqualTo(password)])
+    repeat_password = PasswordField("Repeat new password", validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField("Reset")
