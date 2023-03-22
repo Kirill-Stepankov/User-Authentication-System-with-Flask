@@ -33,5 +33,4 @@ def index():
 def change_language():
     current_user.language = 'ru' if current_user.language == 'en' else 'en'
     db.session.commit()
-    print(request.referrer.split('/'))
     return redirect(request.referrer)
