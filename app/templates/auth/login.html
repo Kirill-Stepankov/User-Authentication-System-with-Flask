@@ -5,12 +5,12 @@
 <br>
 <div class="row ">
     <div class="col-sm-6 mx-auto">
-        <h1>Sign In</h1>
+        <h1>{{_('Sign In')}}</h1>
         <br>
         {{ wtf.quick_form(form)}}
         <br>
-        <p>New user? <a href="{{url_for('auth.register')}}">Click to register</a></p>
-        <p>Forgot your password? <a href="{{url_for('auth.reset_request')}}">Click to reset</a></p>
+        <p>{{ _('New user?') }} <a href="{{url_for('auth.register')}}">{{ _('Click to register') }}</a></p>
+        <p>{{ _('Forgot your password?') }} <a href="{{url_for('auth.reset_request')}}">{{_('Click to reset')}}</a></p>
     </div>
 </div>
 {% endblock %}

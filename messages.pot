@@ -1,0 +1,163 @@
+# Translations template for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-03-22 14:42+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: app/authentication/email.py:9
+msgid "Reset Your Password"
+msgstr ""
+
+#: app/authentication/forms.py:10 app/authentication/forms.py:17
+msgid "Username"
+msgstr ""
+
+#: app/authentication/forms.py:11 app/authentication/forms.py:19
+msgid "Password"
+msgstr ""
+
+#: app/authentication/forms.py:12
+msgid "Remember me"
+msgstr ""
+
+#: app/authentication/forms.py:13
+msgid "LogIn"
+msgstr ""
+
+#: app/authentication/forms.py:18 app/authentication/forms.py:34
+msgid "Email"
+msgstr ""
+
+#: app/authentication/forms.py:20
+msgid "Repeat password"
+msgstr ""
+
+#: app/authentication/forms.py:21
+msgid "Register"
+msgstr ""
+
+#: app/authentication/forms.py:26 app/authentication/forms.py:30
+msgid "This username is already taken"
+msgstr ""
+
+#: app/authentication/forms.py:35
+msgid "Send"
+msgstr ""
+
+#: app/authentication/forms.py:39
+msgid "New password"
+msgstr ""
+
+#: app/authentication/forms.py:40
+msgid "Repeat new password"
+msgstr ""
+
+#: app/authentication/forms.py:41
+msgid "Reset"
+msgstr ""
+
+#: app/authentication/handlers.py:20
+msgid "Invalid username or password"
+msgstr ""
+
+#: app/authentication/handlers.py:40
+msgid "Registration completed!"
+msgstr ""
+
+#: app/authentication/handlers.py:61
+msgid "The message has been sent. Check your email."
+msgstr ""
+
+#: app/authentication/handlers.py:80
+msgid "Password has been reset"
+msgstr ""
+
+#: app/main/forms.py:8
+msgid "Body"
+msgstr ""
+
+#: app/main/forms.py:9
+msgid "Post"
+msgstr ""
+
+#: app/templates/auth/login.html:8
+msgid "Sign In"
+msgstr ""
+
+#: app/templates/auth/login.html:12
+msgid "New user?"
+msgstr ""
+
+#: app/templates/auth/login.html:12
+msgid "Click to register"
+msgstr ""
+
+#: app/templates/auth/login.html:13
+msgid "Forgot your password?"
+msgstr ""
+
+#: app/templates/auth/login.html:13
+msgid "Click to reset"
+msgstr ""
+
+#: app/templates/auth/registration.html:8
+msgid "Registration"
+msgstr ""
+
+#: app/templates/auth/reset_password.html:7
+msgid "Reset your password"
+msgstr ""
+
+#: app/templates/auth/reset_request.html:7
+msgid "Password reset request"
+msgstr ""
+
+#: app/templates/errors/404.html:7
+msgid "Not found"
+msgstr ""
+
+#: app/templates/errors/404.html:8 app/templates/errors/500.html:8
+msgid "Back"
+msgstr ""
+
+#: app/templates/errors/500.html:7
+msgid "Something bad has happened. Sorry fo this."
+msgstr ""
+
+#: app/templates/main/base.html:16
+msgid "Logout"
+msgstr ""
+
+#: app/templates/main/index.html:8
+msgid "Hi"
+msgstr ""
+
+#: app/templates/main/index.html:10
+msgid "Create post"
+msgstr ""
+
+#: app/templates/main/index.html:17
+msgid "said"
+msgstr ""
+
+#: app/templates/main/index.html:26
+msgid "Previous"
+msgstr ""
+
+#: app/templates/main/index.html:29
+msgid "Next"
+msgstr ""
+

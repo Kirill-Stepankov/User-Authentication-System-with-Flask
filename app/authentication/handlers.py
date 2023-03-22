@@ -2,10 +2,11 @@ from app.authentication import bp
 from app.authentication.forms import LoginForm, RegistrationForm, SendEmailResetPasswordForm, ResetPasswordForm
 from flask import render_template
 from app.models import User
-from app import db
+from app import db, app
 from app.authentication.email import send_password_reset_email
 from flask import flash, redirect, url_for, request
 from flask_login import current_user, login_user, login_required, logout_user
+from flask_babel import _
 
 
 @bp.route('/login', methods=['POST', 'GET'])
@@ -16,7 +17,7 @@ def login():
     if form.validate_on_submit():
         user = User.query.filter(User.username == form.username.data).first()
         if user is None or not user.check_password(form.password.data):
-            flash("Invalid username or password", 'error')
+            flash(_("Invalid username or password"))
             return redirect(url_for('auth.login'))
         login_user(user, remember=form.remember.data)
         next_page = request.args.get('next')
@@ -36,7 +37,7 @@ def register():
         new_user.set_password(form.password.data)
         db.session.add(new_user)
         db.session.commit()
-        flash('Registration completed!')
+        flash(_('Registration completed!'))
         return redirect(url_for('auth.login'))
 
     return render_template('auth/registration.html', title='register', form=form)
@@ -57,7 +58,7 @@ def reset_request():
     form = SendEmailResetPasswordForm()
     if form.validate_on_submit():
         user = User.query.filter(User.email == form.email.data).first()
-        flash('The message has been sent. Check your email.')
+        flash(_('The message has been sent. Check your email.'))
         if user is not None:
             send_password_reset_email(user)
         return redirect(url_for('auth.login'))
@@ -76,6 +77,6 @@ def reset_password(token):
     if form.validate_on_submit():
         user.set_password(form.password.data)
         db.session.commit()
-        flash('Password has been reset')
+        flash(_('Password has been reset'))
         return redirect(url_for('auth.login'))
     return render_template('auth/reset_password.html', form=form)

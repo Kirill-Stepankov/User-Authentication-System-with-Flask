@@ -11,11 +11,18 @@ Authentication System
 {% block navbar %}
 {% if current_user.is_authenticated %}
 <nav>
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" href="{{url_for('auth.logout')}}">Logout</a>
-  </li>
-</ul>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link active" href="{{url_for('auth.logout')}}">{{_('Logout')}}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{url_for('main.change_language')}}">
+                {% if current_user.language == 'en'%} RU
+                {% else %} EN
+                {% endif %}
+            </a>
+        </li>
+    </ul>
 </nav>
 {% endif %}
 {% endblock %}

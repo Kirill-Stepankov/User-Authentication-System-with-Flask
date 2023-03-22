@@ -26,3 +26,12 @@ def index():
         if posts.has_prev else None
     return render_template("main/index.html", title='Main', posts=posts.items, form=form,
                            next_url=next_url, prev_url=prev_url)
+
+
+@bp.route('/change_lan')
+@login_required
+def change_language():
+    current_user.language = 'ru' if current_user.language == 'en' else 'en'
+    db.session.commit()
+    print(request.referrer.split('/'))
+    return redirect(request.referrer)
