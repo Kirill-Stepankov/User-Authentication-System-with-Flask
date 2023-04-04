@@ -7,8 +7,8 @@ from app import db, app
 from flask import redirect, url_for, request
 
 
-@bp.route('/', methods=['POST', 'GET'])
 @bp.route('/index', methods=['POST', 'GET'])
+@bp.route('/', methods=['POST', 'GET'])
 @login_required
 def index():
     form = PostForm()

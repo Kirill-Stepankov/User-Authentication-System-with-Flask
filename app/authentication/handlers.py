@@ -1,6 +1,6 @@
 from app.authentication import bp
 from app.authentication.forms import LoginForm, RegistrationForm, SendEmailResetPasswordForm, ResetPasswordForm
-from flask import render_template
+from flask import render_template, session
 from app.models import User
 from app import db, app
 from app.authentication.email import send_password_reset_email

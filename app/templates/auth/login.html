@@ -9,6 +9,12 @@
         <br>
         {{ wtf.quick_form(form)}}
         <br>
+        <a href="{{url_for('oauth.login')}}" class="btn btn-dark" style="width:30%">
+            Sign In Via
+            <img src="{{url_for('static', filename='gh-white.jpg')}}" alt="not found" style="width:19%">
+        </a>
+        <br>
+        <br>
         <p>{{ _('New user?') }} <a href="{{url_for('auth.register')}}">{{ _('Click to register') }}</a></p>
         <p>{{ _('Forgot your password?') }} <a href="{{url_for('auth.reset_request')}}">{{_('Click to reset')}}</a></p>
     </div>
