@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-bp = Blueprint('oauth', 'auth')
+bp = Blueprint('oauth', __name__)
 
 from app.oauth import handlers

@@ -17,5 +17,5 @@ class Config:
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['kirillstepankov17@gmail.com', 'kirillstepankov18@gmail.com']
     LANGUAGES = ['en', 'ru']
-    GITHUB_CLIENT_ID=os.environ.get('GITHUB_CLIENT_ID')
-    GITHUB_CLIENT_SECRET=os.environ.get('GITHUB_CLIENT_SECRET')
+    GITHUB_CLIENT_ID = os.environ.get('GITHUB_CLIENT_ID')
+    GITHUB_CLIENT_SECRET = os.environ.get('GITHUB_CLIENT_SECRET')
