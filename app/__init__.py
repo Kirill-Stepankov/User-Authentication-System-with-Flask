@@ -20,12 +20,23 @@ login = LoginManager(app)
 mail = Mail(app)
 babel = Babel(app)
 oauth = OAuth(app)
+
+CONF_URL = 'https://accounts.google.com/.well-known/openid-configuration'
+
 oauth.register(
     name='github',
     access_token_url='https://github.com/login/oauth/access_token',
     authorize_url='https://github.com/login/oauth/authorize',
     api_base_url='https://api.github.com/',
     client_kwargs={'scope': 'user:email'},
+)
+
+oauth.register(
+    name='google',
+    server_metadata_url=CONF_URL,
+    client_kwargs={
+        'scope': 'openid email profile'
+    }
 )
 
 def get_locale():
@@ -37,19 +48,15 @@ def get_locale():
 babel.init_app(app, locale_selector=get_locale)
 
 from app.authentication import bp as auth_bp
-
 app.register_blueprint(auth_bp, url_prefix='/auth')
 
 from app.oauth import bp as oauth_bp
-
 app.register_blueprint(oauth_bp, url_prefix='/oauth')
 
 from app.main import bp as main_bp
-
 app.register_blueprint(main_bp)
 
 from app.errors import bp as errors_bp
-
 app.register_blueprint(errors_bp)
 
 login.login_view = 'auth.login'
