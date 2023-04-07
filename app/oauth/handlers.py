@@ -19,11 +19,12 @@ def google_authorize():
 
     user_login = token['userinfo']['name']
     user_email = token['userinfo']['email']
+    locale = 'ru' if token['userinfo']['locale'] == 'ru' else 'en'
 
     user_by_email = User.query.filter(User.email == user_email).first()
 
     if user_by_email is None:
-        new_user = User(username=user_login, email=user_email)
+        new_user = User(username=user_login, email=user_email, language=locale)
         db.session.add(new_user)
         db.session.commit()
         login_user(new_user)
