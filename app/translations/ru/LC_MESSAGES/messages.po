@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-03-22 14:42+0300\n"
+"POT-Creation-Date: 2023-04-07 20:56+0300\n"
 "PO-Revision-Date: 2023-03-22 14:09+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -18,10 +18,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-
-#: app/authentication/email.py:9
-msgid "Reset Your Password"
-msgstr "Поменять пароль"
 
 #: app/authentication/forms.py:10 app/authentication/forms.py:17
 msgid "Username"
@@ -95,23 +91,35 @@ msgstr "Тело"
 msgid "Post"
 msgstr "Публиковать"
 
+#: app/oauth/handlers.py:33 app/oauth/handlers.py:75
+msgid ""
+"A user with such an email already exists in the application. Please, log "
+"in to the account."
+msgstr ""
+"Пользователь с таким email адресом уже существует в приложении. "
+"Пожалуйста, войдите в аккаунт."
+
 #: app/templates/auth/login.html:8
 msgid "Sign In"
 msgstr "Вход"
 
-#: app/templates/auth/login.html:12
+#: app/templates/auth/login.html:22 app/templates/auth/login.html:28
+msgid "Log In Via"
+msgstr "Вход через"
+
+#: app/templates/auth/login.html:33
 msgid "New user?"
 msgstr "Новый пользователь?"
 
-#: app/templates/auth/login.html:12
+#: app/templates/auth/login.html:33
 msgid "Click to register"
 msgstr "Регистрация"
 
-#: app/templates/auth/login.html:13
+#: app/templates/auth/login.html:34
 msgid "Forgot your password?"
 msgstr "Забыли пароль?"
 
-#: app/templates/auth/login.html:13
+#: app/templates/auth/login.html:34
 msgid "Click to reset"
 msgstr "Заменить пароль"
 
@@ -120,14 +128,12 @@ msgid "Registration"
 msgstr "Регистрация"
 
 #: app/templates/auth/reset_password.html:7
-#, fuzzy
 msgid "Reset your password"
 msgstr "Поменять пароль"
 
 #: app/templates/auth/reset_request.html:7
-#, fuzzy
 msgid "Password reset request"
-msgstr "Пароль изменен"
+msgstr "Изменение пароля"
 
 #: app/templates/errors/404.html:7
 msgid "Not found"
@@ -164,4 +170,7 @@ msgstr "Предыдущая"
 #: app/templates/main/index.html:29
 msgid "Next"
 msgstr "Следующая"
+
+#~ msgid "Reset Your Password"
+#~ msgstr "Поменять пароль"
 
